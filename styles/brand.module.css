@@ -1,0 +1,82 @@
+.brand_header{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2%;
+}
+.brandcard{
+    position: relative;
+    width: 100% ;
+    height: 100%;
+}
+.card{
+    width: calc(100%/5 - 80px) ;
+    height: 16rem;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 250px rgba(0, 0, 0, 0.25);
+    /* margin: 20px; */
+    padding: 2%;
+    border-radius: 250px;
+    align-items: center ;
+}
+.top_picks{
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 65px;
+    line-height: 78px;
+    letter-spacing: 0.03em;
+
+    color: #000000;
+    margin: 2%;
+    display: flex;
+    justify-content: center ;
+}
+.upper_brand_image, .lower_brand_image{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+}
+.upper_brand_image_one, .upper_brand_image_two, .upper_brand_image_three, .upper_brand_image_three_01, .lower_brand_image_one, .lower_brand_image_two_top, .lower_brand_image_two_bottom_img{
+    position: relative;
+}
+.upper_brand_image_one{
+    width: calc(100%/3 - 100px);
+    height: 33rem;
+}
+.upper_brand_image_two{
+    width: calc(100%/3 - 50px);
+    height: 39rem;
+}
+.upper_brand_image_three{
+    width: calc(100%/3 - 50px);
+    height: 33rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.upper_brand_image_three_01{
+    width: 80%;
+    height: calc(100%/2 - 20px);
+}
+.lower_brand_image_one{
+    width: calc(100%/3 - 80px);
+    height: 39rem;
+}
+.lower_brand_image_two{
+    width: 60%;
+    height: auto;
+}
+.lower_brand_image_two_top{
+    width: 100%;
+    height: 23rem;
+}
+.lower_brand_image_two_bottom{
+    display: flex;
+    flex-direction: row;
+}
+.lower_brand_image_two_bottom_img{
+    width: calc(100%/2 - 40px);
+    height: 20rem;
+    margin: 20px;
+}
