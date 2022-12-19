@@ -4,6 +4,9 @@ import Navbar from '../components/navbar'
 import Home from './Home'
 import Footer from '../components/Footer'
 import Brand_Page from './Brand_Page'
+import Category from './Category'
+import Sales from './Sales'
+import ProductPage from './ProductPage'
 
 
 function MyApp({ Component, pageProps }) {
@@ -11,7 +14,10 @@ function MyApp({ Component, pageProps }) {
     <>
       <Navbar />
       {/* <Home /> */}
-      <Brand_Page/>
+      {/* <Brand_Page/> */}
+      {/* <Category/> */}
+      {/* <Sales/> */}
+      <ProductPage/>
       <Footer/>
       <Component {...pageProps} />
     </>

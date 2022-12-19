@@ -24,7 +24,7 @@ section {
   padding: 2rem 0;
 }
 
-label {
+/* label {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@ label {
   height: 10rem;
   cursor: pointer;
   font-size: large;
-}
+} */
 
 label span {
   font-weight: lighter;
@@ -44,9 +44,9 @@ label span {
   padding-top: 0.5rem;
 }
 
-input {
+/* input {
   display: none;
-}
+} */
 
 img {
   padding: 0;
@@ -103,11 +103,11 @@ img {
   background-color: green;
 }
 
-label:hover,
+/* label:hover,
 .upload-btn:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-}
+} */
 
 .error {
   text-align: center;
@@ -129,4 +129,29 @@ display: flex;
 .footer_icon{
   font-size: 36px;
   margin-right: 6%;
+}
+input {
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  text-align: center;
+}
+.goBackLink{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  /* identical to box height */
+
+  text-align: justify;
+
+  color: rgba(0, 0, 0, 0.6);
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin: 8px;
 }

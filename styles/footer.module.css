@@ -39,3 +39,8 @@
     line-height: 29px;
     color: #000000;
 }
+@media  screen and (max-width: 760px) {
+    .footer_content{
+        flex-direction: column;
+    }
+  }
