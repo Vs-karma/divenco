@@ -56,10 +56,10 @@ function Footer() {
                                 Follow us
                             </div>
                             <p className={ft.content}>
-                                <Link href='#'><i class="fa-brands fa-square-instagram footer_icon"></i></Link>
-                                <Link href='#'><i class="fa-brands fa-facebook footer_icon"></i></Link>
-                                <Link href='#'><i class="fa-brands fa-twitter footer_icon"></i></Link>
-                                <Link href='#'><i class="fa-brands fa-linkedin footer_icon"></i></Link>
+                                <Link href='#'><i className="fa-brands fa-square-instagram footer_icon"></i></Link>
+                                <Link href='#'><i className="fa-brands fa-facebook footer_icon"></i></Link>
+                                <Link href='#'><i className="fa-brands fa-twitter footer_icon"></i></Link>
+                                <Link href='#'><i className="fa-brands fa-linkedin footer_icon"></i></Link>
                             </p>
                         </div>
                         <div className="mail_us">

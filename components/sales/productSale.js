@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
-import pc from '../styles/sales.module.css'
+import pc from '../../styles/sales.module.css'
 function productSale() {
   return (
     <div className={pc.productSale}>
         <div className={pc.productCard}>
             <div className={pc.productImage}>
-                <Image src = '/adidasbrand.png' layout='fill'/>
+                <Image src = '/adidasbrand.png' layout='fill' alt='brand'/>
             </div>
             <div className={pc.pruductDetail}>
                 <div className={pc.discountPrice}>
@@ -25,7 +25,7 @@ function productSale() {
         </div>
         <div className={pc.productCard}>
             <div className={pc.productImage}>
-                <Image src = '/adidasbrand.png' layout='fill'/>
+                <Image src = '/adidasbrand.png' layout='fill' alt='brand'/>
             </div>
             <div className={pc.pruductDetail}>
                 <div className={pc.discountPrice}>
@@ -44,7 +44,7 @@ function productSale() {
         </div>
         <div className={pc.productCard}>
             <div className={pc.productImage}>
-                <Image src = '/adidasbrand.png' layout='fill'/>
+                <Image src = '/adidasbrand.png' layout='fill' alt='brand'/>
             </div>
             <div className={pc.pruductDetail}>
                 <div className={pc.discountPrice}>
@@ -63,7 +63,7 @@ function productSale() {
         </div>
         <div className={pc.productCard}>
             <div className={pc.productImage}>
-                <Image src = '/adidasbrand.png' layout='fill'/>
+                <Image src = '/adidasbrand.png' layout='fill' alt='brand'/>
             </div>
             <div className={pc.pruductDetail}>
                 <div className={pc.discountPrice}>

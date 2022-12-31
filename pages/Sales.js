@@ -1,7 +1,7 @@
 import React from 'react'
-import Filter from '../components/Filter'
+import Filter from '../components/sales/Filter'
 import sl from '../styles/sales.module.css'
-import ProductSale from '../components/productSale'
+import ProductSale from '../components/sales/productSale'
 import Image from 'next/image'
 function Sales() {
     return (
@@ -12,9 +12,9 @@ function Sales() {
                 </div>
                 <div className={sl.sales_filter_btn}>
                     <div className={sl.filter_toggle}>
-                        <div class="form-check form-switch mx-4">
-                            <input class="form-check-input" type="checkbox" role="switch" id="slexSwitchCheckDefault" />
-                            <label class="form-check-label font-weight-bold" for="slexSwitchCheckDefault">Hide Filter</label>
+                        <div classNam="form-check form-switch mx-4">
+                            <input className="form-check-input" type="checkbox" role="switch" id="slexSwitchCheckDefault" />
+                            <label className="form-check-label font-weight-bold" htmlFor="slexSwitchCheckDefault">Hide Filter</label>
                         </div>
                     </div>
                     <div className={sl.sales_sort_btn}>
@@ -66,7 +66,7 @@ function Sales() {
                 <div className={sl.productSale}>
                     <div className={sl.productCard}>
                         <div className={sl.productImage}>
-                            <Image src='/adidasbrand.png' layout='fill' />
+                            <Image src='/adidasbrand.png' layout='fill' alt='brand' />
                         </div>
                         <div className={sl.pruductDetail}>
                             <div className={sl.discountPrice}>
@@ -85,7 +85,7 @@ function Sales() {
                     </div>
                     <div className={sl.productCard}>
                         <div className={sl.productImage}>
-                            <Image src='/adidasbrand.png' layout='fill' />
+                            <Image src='/adidasbrand.png' layout='fill' alt='brand'/>
                         </div>
                         <div className={sl.pruductDetail}>
                             <div className={sl.discountPrice}>
@@ -104,7 +104,7 @@ function Sales() {
                     </div>
                     <div className={sl.productCard}>
                         <div className={sl.productImage}>
-                            <Image src='/adidasbrand.png' layout='fill' />
+                            <Image src='/adidasbrand.png' layout='fill' alt='brand'/>
                         </div>
                         <div className={sl.pruductDetail}>
                             <div className={sl.discountPrice}>
@@ -123,7 +123,7 @@ function Sales() {
                     </div>
                     <div className={sl.productCard}>
                         <div className={sl.productImage}>
-                            <Image src='/adidasbrand.png' layout='fill' />
+                            <Image src='/adidasbrand.png' layout='fill' alt='brand' />
                         </div>
                         <div className={sl.pruductDetail}>
                             <div className={sl.discountPrice}>

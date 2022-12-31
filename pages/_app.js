@@ -1,6 +1,6 @@
 
 import '../styles/globals.css'
-import Navbar from '../components/navbar'
+import Navbar from '../components/navbar/navbar'
 import Home from './Home'
 import Footer from '../components/Footer'
 import Brand_Page from './Brand_Page'
@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
       {/* <Category/> */}
       {/* <Sales/> */}
       <ProductPage/>
-      <Footer/>
+      {/* <Footer/> */}
       <Component {...pageProps} />
     </>
   )

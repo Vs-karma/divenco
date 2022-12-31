@@ -1,65 +1,86 @@
-import React from 'react'
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
-import ProductCarousel from '../components/productCarousel';
-import ProductDetail from '../components/productPageDetail';
-import Link from 'next/link';
-import pp from '../styles/productpage.module.css'
-import Image from 'next/image';
+import { Carousel } from "react-responsive-carousel";
+import ProductCarousel from "../components/product-page/productCarousel";
+import ProductDetail from "../components/product-page/productPageDetail";
+import Link from "next/link";
+import pp from "../styles/productpage.module.css";
+import Image from "next/image";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+
+// react carousel
+import {
+  ButtonBack,
+  ButtonNext,
+  CarouselProvider,
+  DotGroup,
+  ImageWithZoom,
+  Slide,
+  Slider
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
+
 function ProductPage() {
-    return (
-        <div>
-            <div className="container">
-                <Link href="#"><a className='goBackLink'> Go Back </a></Link>
-                <div className={pp.productCarouselAndDetail}>
-                    <div className="carousel">
-                        <div className={pp.product_carousel}>
-                            <div className={pp.product_main_img}>
-                                <Image src='/adidasbrand.png' layout='fill' />
-                            </div>
-                        </div>
-                        <div className={pp.product_img_option}>
-                            <div className={pp.pruduct_list_img}>
-                                <Image src='/adidasbrand.png' layout='fill' />
-                            </div>
-                            <div className={pp.pruduct_list_img}>
-                                <Image src='/adidasbrand.png' layout='fill' />
-                            </div>
-                            <div className={pp.pruduct_list_img}>
-                                <Image src='/adidasbrand.png' layout='fill' />
-                            </div>
-                        </div>
-                    </div>
-                    <div className={pp.productDetail}>
-                        <h1>Puma Shoes</h1>
-                        <p>Shoes for youngster</p>
-                        <div className="productSize">
-                            <div className="size">
-                                <p>Select Size</p>
-                                <p>Size Guide</p>
-                            </div>
-                            <button className="sizeBtn">6 UK</button>
-                            <button className="sizeBtn">7 UK</button>
-                            <button className="sizeBtn">8 UK</button>
-                            <button className="sizeBtn">9 UK</button>
-                            <button className="sizeBtn">10 UK</button>
-                            <button className="sizeBtn">11 UK</button>
-                            <button className="sizeBtn">12 UK</button>
-                        </div>
-                        <h1 className="desc">Description</h1>
-                        <p className="productDescription">
-                            The Air Jordan 5 Retro delivers heritage style and modern comfort. It combines leather and synthetic materials on its upper for durability and airflow, while a Max Air unit in the heel offers plush comfort.
-                        </p>
-                        <div className="productAvailability">
-                            <p>
-                                Product is Excluded from site Promotion and Discount
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+  const img = [1, 2, 3, 4, 5, 6];
+  return (
+    <div className={pp.productPage}>
+      <Link href="#">
+        <a className="goBackLink"> Go Back </a>
+      </Link>
+      <div className={pp.car}>
+        <CarouselProvider
+          step={1}
+          naturalSlideWidth={100}
+          naturalSlideHeight={80}
+          totalSlides={3}
+          infinite
+        >
+          <Slider>
+            {img.map((e, i) => {
+              <Slide index={i}>
+                <ImageWithZoom
+                  src="/adidasbrand.png"
+                  alt="shoe"
+                  className={pp.imgWithZoomStyle}
+                />
+              </Slide>;
+            })}
+            <Slide index={0}>
+              <ImageWithZoom
+                src="/adidasbrand.png"
+                alt="shoe"
+                className={pp.imgWithZoomStyle}
+              />
+            </Slide>
+            <Slide index={1}>
+              <ImageWithZoom
+                src="/adidasbrand.png"
+                alt="sho"
+                width={550}
+                height={500}
+              />
+            </Slide>
+            <Slide index={2}>
+              <ImageWithZoom
+                src="/adidasbrand.png"
+                alt="sho"
+                width={500}
+                height={500}
+              />
+            </Slide>
+          </Slider>
+          <ButtonBack className={`${pp.carouselLeftBtn} ${pp.carouselBtn}`}>
+            <AiOutlineLeft size={30} />
+          </ButtonBack>
+          <ButtonNext className={`${pp.carouselRightBtn} ${pp.carouselBtn}`}>
+            <AiOutlineRight size={30} />
+          </ButtonNext>
+          <DotGroup />
+        </CarouselProvider>
+        <div className="productDetails" />
+      </div>
+    </div>
+  );
 }
 
-export default ProductPage
+export default ProductPage;

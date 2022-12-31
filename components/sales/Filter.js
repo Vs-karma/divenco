@@ -1,5 +1,5 @@
 import React from 'react'
-import fl from '../styles/sales.module.css'
+import fl from '../../styles/sales.module.css'
 
 function Filter() {
     return (
