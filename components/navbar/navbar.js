@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import nv from '../styles/navbar.module.css'
+import nv from '../../styles/navbar.module.css'
 import Link from 'next/link'
-function navbar() {
+function Navbar() {
   return (
     // <>
     <div className={nv.navbar}>
@@ -16,13 +16,13 @@ function navbar() {
         <Link href='#'>Sale</Link>
       </div>
       <div className={nv.navbar_right}>
-      <i class="fa-sharp fa-solid fa-cart-shopping navbar_icon"></i>
-        <i class="fa-solid fa-heart navbar_icon"></i>
-        <i class="fa-solid fa-user navbar_icon"></i>
+      <i className="fa-sharp fa-solid fa-cart-shopping navbar_icon"></i>
+        <i className="fa-solid fa-heart navbar_icon"></i>
+        <i className="fa-solid fa-user navbar_icon"></i>
       </div>
     </div>
     // </>
   )
 }
 
-export default navbar
+export default Navbar

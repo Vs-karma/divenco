@@ -1,5 +1,5 @@
 import React from 'react'
-import pd from '../styles/productpage.module.css'
+import pd from '../../styles/productpage.module.css'
 function productPageDetail() {
     return (
         <div>

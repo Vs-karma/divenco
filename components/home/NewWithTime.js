@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import hm from '../styles/Home.module.css'
-import ProductCard1 from './ProductCard1'
+import hm from '../../styles/Home.module.css'
+import ProductCard1 from '../reusable-comm/ProductCard1'
 
 function NewWithTime() {
     return (

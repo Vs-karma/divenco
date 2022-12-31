@@ -1,5 +1,5 @@
 import React from 'react'
-import hm from '../styles/Home.module.css'
+import hm from '../../styles/Home.module.css'
 import MensCollectionCard from './MensCollectionCard'
 import WomensCollectionCard from './WomensCollectionCard'
 
