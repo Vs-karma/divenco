@@ -1,3 +1,16 @@
+/* main page style */
+.mainFrame {
+    height: 100%;
+    padding: 0 4rem;
+}
+
+.divideTwo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
 /* carousel styles  */
 
 .car {
@@ -47,9 +60,59 @@
     justify-content: space-evenly;
 }
 
-/* responsive carosel */
+
+
+
+/* product Page detail style is here  */
+.mainDes {
+    display: flex;
+    width: 40%;
+}
+
+.sizeGuide {
+    display: flex;
+    size: 1rem;
+    color: gray;
+    justify-content: space-between;
+}
+
+.sizeGuideBtn {
+    font: bold;
+    size: 2rem;
+    color: gray;
+}
+
+.sizeGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.productDetail {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+
+
+/* all responsive code is here */
+
 @media (max-width: 1024px) {
     .car {
+        width: 100%;
+    }
+
+    .mainDes {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .mainFrame {
+        padding: 0;
+    }
+
+    .productDetail {
         width: 100%;
     }
 }
