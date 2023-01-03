@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   ButtonBack,
   ButtonNext,
@@ -10,21 +9,16 @@ import {
   Image
 } from "pure-react-carousel";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import useWindowDimensions from "../../hooks/getWindowsInfo";
+import 'pure-react-carousel/dist/react-carousel.es.css';
 import pp from "../../styles/productpage.module.css";
 
-import adidasBrandShoe from "../../public/adidasbrand.png"
 
 
 function ProductCarousel() {
   const { height, width } = useWindowDimensions();
   return (
-    <div className={pp.productPage}>
-      <Image src="../../public/adidasbrand.png" alt="yeah" />
-      <Link href="#">
-        <a className="goBackLink"> Go Back asdf</a>
-      </Link>
       <div className={pp.car}>
         <CarouselProvider
           step={1}
@@ -35,13 +29,13 @@ function ProductCarousel() {
         >
           <Slider>
             <Slide index={0}>
-              <ImageWithZoom src={adidasBrandShoe} alt="shoe" />
+              <ImageWithZoom src="./adidasbrand.png" alt="shoe" />
             </Slide>
             <Slide index={1}>
-              <ImageWithZoom src={adidasBrandShoe} alt="shoe" />
+              <ImageWithZoom src="./adidasbrand.png" alt="shoe" />
             </Slide>
             <Slide index={2}>
-              <ImageWithZoom src={adidasBrandShoe} alt="shoe" />
+              <ImageWithZoom src="./adidasbrand.png" alt="shoe" />
             </Slide>
           </Slider>
           <ButtonBack className={`${pp.carouselLeftBtn} ${pp.carouselBtn}`}>
@@ -52,20 +46,18 @@ function ProductCarousel() {
           </ButtonNext>
           <div className={pp.imgShow}>
             <Dot className={pp.imgPreview} slide={0}>
-              <Image src={adidasBrandShoe} alt="shoe" />
+              <Image src="./adidasbrand.png" alt="shoe" />
             </Dot>
             <Dot className={pp.imgPreview} slide={1}>
-              <Image src={adidasBrandShoe} alt="shoe" />
+              <Image src="./adidasbrand.png" alt="shoe" />
             </Dot>
             <Dot className={pp.imgPreview} slide={2}>
-              <Image src={adidasBrandShoe} alt="shoe" />
-            </Dot>
+              <Image src="./adidasbrand.png" alt="shoe" />
+           </Dot>
           </div>
         </CarouselProvider>
         <div className="productDetails" />
       </div>
-      yeah
-    </div>
   );
 }
 
