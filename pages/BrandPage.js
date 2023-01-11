@@ -2,7 +2,7 @@ import React from 'react'
 import Brand_page_header from '../components/brand-page/Brand_page_header'
 import Top_Picks from '../components/brand-page/Top_Picks'
 
-function Brand_Page() {
+function BrandPage() {
   return (
     <>
         <Brand_page_header/>
@@ -11,4 +11,4 @@ function Brand_Page() {
   )
 }
 
-export default Brand_Page
+export default BrandPage

@@ -1,34 +1,41 @@
-import Image from 'next/image'
-import React from 'react'
-import ProductCard1 from '../components/reusable-comm/ProductCard1'
-import cg from '../styles/category.module.css'
+import Image from "next/image";
+import React from "react";
+import ProductCard1 from "../components/reusable-comm/ProductCard1";
+import cg from "../styles/category.module.css";
 function Category() {
   return (
     <div>
       <div className={cg.category_Section}>
         <div className={cg.category}>
           <div className={cg.category_head_img}>
-            <Image src='/sneaker2.jpg' layout='fill' alt='diff types of shoes'/>
+            <Image
+              src="/sneaker2.jpg"
+              layout="fill"
+              alt="diff types of shoes"
+            />
             <h1 className={cg.category_img_text}>SNEAKER</h1>
           </div>
           <div className={cg.category_head_img}>
-            <Image src='/canvas.jpeg' layout='fill' alt='diff types of shoes'/>
+            <Image src="/canvas.jpeg" layout="fill" alt="diff types of shoes" />
             <h1 className={cg.category_img_text}>CANVAS</h1>
           </div>
           <div className={cg.category_head_img}>
-            <Image src='/formal.jpg' layout='fill' alt='diff types of shoes'/>
+            <Image src="/formal.jpg" layout="fill" alt="diff types of shoes" />
             <h1 className={cg.category_img_text}>FORMAL</h1>
           </div>
           <div className={cg.category_head_img}>
-            <Image src='/heels.jpg' layout='fill' alt='diff types of shoes'/>
+            <Image src="/heels.jpg" layout="fill" alt="diff types of shoes" />
             <h1 className={cg.category_img_text}>HIGH HEELS</h1>
           </div>
           <div className={cg.category_head_img}>
-            <Image src='/slippers.jpg' layout='fill' alt='diff types of shoes'/>
+            <Image
+              src="/slippers.jpg"
+              layout="fill"
+              alt="diff types of shoes"
+            />
             <h1 className={cg.category_img_text}>SLIPPERS</h1>
           </div>
         </div>
-
       </div>
       <div className="container">
         <div className="sneaker">
@@ -57,7 +64,7 @@ function Category() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Category
+export default Category;
