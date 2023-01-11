@@ -12,8 +12,8 @@ function Home() {
                     <div className={hm.home_img_crousel}>
                         <Image src='/nikeshoed.png' layout='fill' alt='nikeShoe'/>
                     </div>
-                    <div className={hm.crousel_heading}>
-                        Nike
+                    <div className="absolute text-[10.8rem] text-white top-10 z-0 font-[700]">
+                        NIKE
                     </div>
                 </div>
                 <Brand/>

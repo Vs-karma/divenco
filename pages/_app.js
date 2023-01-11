@@ -1,27 +1,15 @@
-
-import '../styles/globals.css'
-import Navbar from '../components/navbar/navbar'
-import Home from './Home'
-import Footer from '../components/Footer'
-import Brand_Page from './Brand_Page'
-import Category from './Category'
-import Sales from './Sales'
-import ProductPage from './ProductPage'
-
+import Footer from "../components/Footer";
+import Navbar from "../components/navbar/Navbar";
+import "../styles/global.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <div>
       <Navbar />
-      {/* <Home /> */}
-      {/* <Brand_Page/> */}
-      {/* <Category/> */}
-      {/* <Sales/> */}
-      <ProductPage/>
-      {/* <Footer/> */}
       <Component {...pageProps} />
-    </>
-  )
+      <Footer />
+    </div>
+  );
 }
 
-export default MyApp
+export default MyApp;
