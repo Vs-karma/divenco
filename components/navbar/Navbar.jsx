@@ -6,18 +6,18 @@ import { RxAvatar } from "react-icons/rx";
 
 function Navbar() {
   return (
-    <div className="flex md:w-full md:justify-between py-4 px-2 z-10">
+    <div className="z-10 flex px-2 py-4 bg-white md:w-full md:justify-between">
       <div className="">
         <Image
           src="/logo.png"
           width={50}
           height={50}
           alt="logo"
-          className="h-auto w-24"
+          className="w-24 h-auto"
         />
       </div>
       <div className="md:text-3xl text-xl md:w-[100%] justify-center flex md:gap-24 font-bold items-center">
-        <Link href="/Home">Home</Link>
+        <Link href="/">Home</Link>
         <Link href="/BrandPage">Brand</Link>
         <Link href="/Category">Category</Link>
         <Link href="/Sales">Sale</Link>
