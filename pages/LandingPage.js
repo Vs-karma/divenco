@@ -6,20 +6,25 @@ import NewWithTime from "../components/home-page/NewWithTime";
 import hm from "../styles/Home.module.css";
 function LandingPage() {
   return (
-    <div className="z-0">
-      <div className={hm.home}>
-        <div className={hm.home_crousel}>
-          <div className={hm.home_img_crousel}>
-            <Image src="/nikeshoed.png" layout="fill" alt="nikeShoe" />
-          </div>
-          <span className="absolute text-[10.8rem] text-white top-10 z-0 font-[700] p-0 m-0">
+    <div className="z-0 w-full md:h-full">
+      <div className="flex flex-col">
+        <div className="h-screen bg-[#ED9C52] w-full">
+          <div className="text-6xl md:text-9xl text-white top-10 z-0 font-[700] p-0 m-0 text-center tracking-widest">
             NIKE
-          </span>
+          </div>
+          <div className="relative h-full -top-56 md:-top-20">
+            <Image
+              src="/nikeshoed.png"
+              alt="nikeShoe"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
         </div>
-        <Brand />
-        <NewWithTime />
-        <Collections />
       </div>
+      <Brand />
+      <NewWithTime />
+      <Collections />
     </div>
   );
 }
