@@ -9,7 +9,7 @@ function LandingPage() {
     <div className="z-0 w-full md:h-full">
       <div className="flex flex-col">
         <div className="h-screen bg-[#ED9C52] w-full">
-          <div className="text-6xl md:text-9xl text-white top-10 z-0 font-[700] p-0 m-0 text-center tracking-widest">
+          <div className="text-white text-6xl md:text-9xl top-10 z-0 font-[700] p-0 m-0 text-center tracking-widest">
             NIKE
           </div>
           <div className="relative h-full -top-56 md:-top-20">
