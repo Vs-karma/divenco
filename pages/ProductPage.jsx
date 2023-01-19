@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import ProductCarousel from "../components/productPage/ProductCarousel";
-import ProductPageDetail from "../components/productPage/ProductPageDetail";
+import ProductCarousel from "../components/product-page/ProductCarousel";
+import ProductPageDetail from "../components/product-page/ProductPageDetail";
 import pp from "../styles/productpage.module.css";
 
 function ProductPage() {
