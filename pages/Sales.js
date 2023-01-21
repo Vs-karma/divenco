@@ -4,7 +4,7 @@ function Sales() {
     // sales page work
     return (
         <>
-            <div className="flex items-center justify-between mx-3">
+            <div className="flex items-center justify-between m-3 xl:mx-24">
                 <div className="text-xl font-bold">Divenco Shoes</div>
                 <div className="flex gap-4 itesm-center">
                     <div className="form-control">
