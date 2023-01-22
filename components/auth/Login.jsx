@@ -5,38 +5,67 @@ export default function Login({ visible, onClose}) {
   
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-25 backdrop-blur-sm z-[100]">
-      <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-25 backdrop-blur-sm">
-      <div className="p-2 bg-white rounded w-72">
-        <h1 className="text-xl font-semibold text-center text-gray-700">
-          Welcome back
-        </h1>
-        <button onClick={onClose}>X</button>
-        <p className="mb-5 text-center text-gray-700">Sign in</p>
+            <div className="w-full p-6 m-auto bg-white rounded-md shadow-md lg:max-w-xl">
+                <h1 className="text-3xl font-semibold text-center text-purple-700 underline">
+                   Log In
+                </h1>
+                <div className="flex justify-end">
+                <button class="text-3xl cursor-pointer alert-del" onClick={onClose}>&times;</button>
+                </div>
+    
+                <form className="mt-6">
+                    <div className="mb-2">
+                        <label
+                            for="email"
+                            className="block text-sm font-semibold text-gray-800"
+                        >
+                            Email
+                        </label>
+                        <input
+                            type="email"
+                            className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                        />
+                    </div>
+                    <div className="mb-2">
+                        <label
+                            for="password"
+                            className="block text-sm font-semibold text-gray-800"
+                        >
+                            Password
+                        </label>
+                        <input
+                            type="password"
+                            className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                        />
+                    </div>
+                    <a
+                        href="#"
+                        className="text-xs text-purple-600 hover:underline"
+                    >
+                        Forget Password?
+                    </a>
+                    <div className="mt-6">
+                        <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
+                            Login
+                        </button>
+                    </div>
+                </form>
 
-        <div className="flex flex-col">
-          <input
-            type="text"
-            className="p-2 mb-5 border border-gray-700 rounded"
-            placeholder="email@example.com"
-          />
-          <input
-            type="text"
-            className="p-2 mb-5 border border-gray-700 rounded"
-            placeholder="********"
-          />
+                <p className="mt-8 text-xs font-light text-center text-gray-700">
+                    {" "}
+                    Don't have an account?{" "}
+                    <a
+                        href="#"
+                        className="font-medium text-purple-600 hover:underline"
+                    >
+                        Sign up
+                    </a>
+                </p>
+            </div>
         </div>
-        <div className="text-center">
-          <button className="px-5 py-2 text-white bg-gray-700 rounded">
-            Sign in
-          </button>
-        </div>
-      </div>
-    </div>
-    
-    
-    </div>
   );
 }
+
 
 // import React from "react";
 
