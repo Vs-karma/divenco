@@ -32,7 +32,7 @@ function Sales() {
                     </div>
                 </div>
             </div>
-            <div className="grid gap-4 m-3 justify-items-center xl:grid-cols-3 xl:mx-24 lg:grid-cols-2">
+            <div className="grid grid-cols-2 gap-4 m-3 justify-items-center xl:grid-cols-3 xl:mx-24">
                 {[...Array(30)].map(i => <ProductCard key={i} />)}
             </div>
         </>
