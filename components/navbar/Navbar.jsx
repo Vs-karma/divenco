@@ -3,12 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import { RxAvatar } from "react-icons/rx";
-import { useState } from "react";
-import Login from "../auth/Login";
 
 function Navbar() {
-  const [modal, setModal] = useState(false);
-  console.log(modal);
+  
   return (
     <>
     <div className="z-10 flex justify-between px-2 py-4 bg-white md:w-full">
@@ -34,12 +31,11 @@ function Navbar() {
         <div className="cursor-pointer">
           <AiOutlineHeart size={30} />
         </div>
-        <div className="cursor-pointer" onClick={() => setModal(p => !p)}>
+        <div className="cursor-pointer">
           <RxAvatar size={30} />
         </div>
       </div>  
     </div>
-    {modal ? <Login /> : null}
     </>
   );
 }

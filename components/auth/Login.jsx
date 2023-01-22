@@ -1,10 +1,13 @@
 import React from "react";
 
 const Login = () => {
-  return (
-    <div className="modal">
-      <div className="relative modal-box">
-        <label className="absolute btn btn-sm btn-circle right-2 top-2">
+  return <div>h</div>;
+};
+
+export default Login;
+
+{
+  /* <label className="absolute btn btn-sm btn-circle right-2 top-2">
           ✕
         </label>
         <label>User Name</label>
@@ -18,10 +21,5 @@ const Login = () => {
           type="text"
           placeholder="Type here"
           className="w-full max-w-xs input input-bordered"
-        />
-      </div>
-    </div>
-  );
-};
-
-export default Login;
+        /> */
+}
