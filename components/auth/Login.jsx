@@ -14,13 +14,13 @@ export default function Login({ visible, onClose}) {
                    Log In
                 </h1>
                 <div className="flex justify-end">
-                <button class="text-3xl cursor-pointer alert-del" onClick={onClose}>&times;</button>
+                <button className="text-3xl cursor-pointer alert-del" onClick={onClose}>&times;</button>
                 </div>
     
                 <form className="mt-6">
                     <div className="mb-2">
                         <label
-                            for="email"
+                            htmlFor="email"
                             className="block text-sm font-semibold text-gray-800"
                         >
                             Email
@@ -32,7 +32,7 @@ export default function Login({ visible, onClose}) {
                     </div>
                     <div className="mb-2">
                         <label
-                            for="password"
+                            htmlFor="password"
                             className="block text-sm font-semibold text-gray-800"
                         >
                             Password
