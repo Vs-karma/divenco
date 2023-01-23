@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
@@ -14,7 +14,7 @@ const ProductCard = () => {
         {heart ? <AiOutlineHeart size={30} /> : <AiFillHeart size={30} />}
       </span>
       <figure>
-        <Image src="/adidasbrand.png" alt="Shoes" layout="fill" />
+        <img src="/adidasbrand.png" alt="shoe" />
       </figure>
       <div className="cursor-pointer card-body">
         <div className="flex items-center justify-between">
