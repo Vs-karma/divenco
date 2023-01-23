@@ -16,7 +16,7 @@ export default function Login({ visible, onClose}) {
                 <form className="mt-6">
                     <div className="mb-2">
                         <label
-                            for="email"
+                            htmlFor="email"
                             className="block text-sm font-semibold text-gray-800"
                         >
                             Email
@@ -28,7 +28,7 @@ export default function Login({ visible, onClose}) {
                     </div>
                     <div className="mb-2">
                         <label
-                            for="password"
+                            htmlFor="password"
                             className="block text-sm font-semibold text-gray-800"
                         >
                             Password
