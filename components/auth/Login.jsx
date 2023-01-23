@@ -10,13 +10,13 @@ export default function Login({ visible, onClose}) {
                    Log In
                 </h1>
                 <div className="flex justify-end">
-                <button class="text-3xl cursor-pointer alert-del" onClick={onClose}>&times;</button>
+                <button className="text-3xl cursor-pointer alert-del" onClick={onClose}>&times;</button>
                 </div>
     
                 <form className="mt-6">
                     <div className="mb-2">
                         <label
-                            for="email"
+                            htmlFor="email"
                             className="block text-sm font-semibold text-gray-800"
                         >
                             Email
@@ -28,7 +28,7 @@ export default function Login({ visible, onClose}) {
                     </div>
                     <div className="mb-2">
                         <label
-                            for="password"
+                            htmlFor="password"
                             className="block text-sm font-semibold text-gray-800"
                         >
                             Password
@@ -53,7 +53,7 @@ export default function Login({ visible, onClose}) {
 
                 <p className="mt-8 text-xs font-light text-center text-gray-700">
                     {" "}
-                    Don't have an account?{" "}
+                    Dont have an account?{" "}
                     <a
                         href="#"
                         className="font-medium text-purple-600 hover:underline"
@@ -67,28 +67,4 @@ export default function Login({ visible, onClose}) {
 }
 
 
-// import React from "react";
 
-// const Login = () => {
-//   return <div>h</div>;
-// };
-
-// export default Login;
-
-// {
-//   /* <label className="absolute btn btn-sm btn-circle right-2 top-2">
-//           ✕
-//         </label>
-//         <label>User Name</label>
-//         <input
-//           type="text"
-//           placeholder="Type here"
-//           className="w-full max-w-xs input input-bordered"
-//         />
-//         <label>Password</label>
-//         <input
-//           type="text"
-//           placeholder="Type here"
-//           className="w-full max-w-xs input input-bordered"
-//         /> */
-// }
