@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
@@ -13,7 +14,7 @@ const ProductCard = () => {
         {heart ? <AiOutlineHeart size={30} /> : <AiFillHeart size={30} />}
       </span>
       <figure>
-        <img src="/adidasbrand.png" alt="Shoes" layout="fill" />
+        <Image src="/adidasbrand.png" alt="Shoes" layout="fill" />
       </figure>
       <div className="cursor-pointer card-body">
         <div className="flex items-center justify-between">
