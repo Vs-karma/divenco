@@ -10,7 +10,7 @@ export default function Login({ visible, onClose}) {
                    Log In
                 </h1>
                 <div className="flex justify-end">
-                <button class="text-3xl cursor-pointer alert-del" onClick={onClose}>&times;</button>
+                <button className="text-3xl cursor-pointer alert-del" onClick={onClose}>&times;</button>
                 </div>
     
                 <form className="mt-6">
@@ -67,28 +67,3 @@ export default function Login({ visible, onClose}) {
 }
 
 
-// import React from "react";
-
-// const Login = () => {
-//   return <div>h</div>;
-// };
-
-// export default Login;
-
-// {
-//   /* <label className="absolute btn btn-sm btn-circle right-2 top-2">
-//           ✕
-//         </label>
-//         <label>User Name</label>
-//         <input
-//           type="text"
-//           placeholder="Type here"
-//           className="w-full max-w-xs input input-bordered"
-//         />
-//         <label>Password</label>
-//         <input
-//           type="text"
-//           placeholder="Type here"
-//           className="w-full max-w-xs input input-bordered"
-//         /> */
-// }
