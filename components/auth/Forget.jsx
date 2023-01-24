@@ -3,11 +3,10 @@ import Login from "./Login";
 import VerifyOTP from "./VerifyOTP"
 
 export default function Forget({ visible, onClose}) {
-    if(!visible) return null;
     const [showMyVerify, setShowMyVerify] = useState(false);
-    const handleOnCloseVerify = () => setShowMyVerify(false);
+    const handleOnCloseVerify = () => setShowMyVerify(false);  
+    if(!visible) return null;
   
-    
     return (
       <>
       <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-25 backdrop-blur-sm z-[100]">

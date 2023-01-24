@@ -3,12 +3,14 @@ import Signup from "./Signup";
 import Forget from "./Forget";
 
 export default function Login({ visible, onClose}) {
-  if(!visible) return null;
-  const [showMySign, setShowMySign] = useState(false);
-  const handleOnClose = () => setShowMySign(false);
+    const [showMySign, setShowMySign] = useState(false);
+    const handleOnClose = () => setShowMySign(false);
+  
+    const [showMyForget, setShowMyForget] = useState(false);
+    const handleOnCloseForget = () => setShowMyForget(false);
 
-  const [showMyForget, setShowMyForget] = useState(false);
-  const handleOnCloseForget = () => setShowMyForget(false);
+  if(!visible) return null;
+  
   
   return (
     <>

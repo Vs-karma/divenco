@@ -3,9 +3,10 @@ import Forget from "./Forget";
 import Reset from "./Reset";
 
 export default function VerifyOTP({ visible, onClose}) {
-    if(!visible) return null;
     const [showMyReset, setShowMyReset] = useState(false);
     const handleOnCloseReset = () => setShowMyReset(false);
+    if(!visible) return null;
+
   
     
     return (
