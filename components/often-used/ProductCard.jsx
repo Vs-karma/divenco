@@ -28,7 +28,7 @@ const ProductCard = () => {
           If a dog chews shoes whose shoes does he choose?
         </div>
         <div className="justify-center md:justify-end card-actions">
-          <button className="btn btn-[#0782F4] btn-xs md:btn">Buy Now</button>
+          <button className="btn btn-btnclr btn-xs md:btn">Buy Now</button>
         </div>
       </div>
     </div>

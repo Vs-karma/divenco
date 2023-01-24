@@ -40,7 +40,7 @@ export default function Navbar() {
       </div> 
       {/* <Login onClose={handleOnClose} visible={showMyModal}/>  */}
     </div>
-    {/* <Login onClose={handleOnClose} visible={showMyModal}/>  */}
+    <Login onClose={handleOnClose} visible={showMyModal}/> 
     </>
   );
 }
