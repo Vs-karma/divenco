@@ -23,7 +23,7 @@ height: 1101px; */
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Sen';
+  /* font-family: 'Sen'; */
   font-style: normal;
   font-weight: 700;
   font-size: 174px;
@@ -68,7 +68,7 @@ height: 1101px; */
 }
 
 .home_title {
-  font-family: 'Sen';
+  /* font-family: 'Sen'; */
   font-style: normal;
   font-weight: 700;
   font-size: 51px;

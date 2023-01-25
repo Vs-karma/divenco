@@ -8,7 +8,7 @@
     padding: 1%;
 }
 .footer_content_header{
-    font-family: 'Inter';
+    /* font-family: 'Inter'; */
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
@@ -23,7 +23,7 @@
 .footer_head_name{
     display: flex;
     justify-content: center;
-    font-family: 'Inter';
+    /* font-family: 'Inter'; */
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -32,7 +32,7 @@
     margin-bottom: 2%;
 }
 .content{
-    font-family: 'Inter';
+    /* font-family: 'Inter'; */
     font-style: normal;
     font-weight: 400;
     font-size: 24px;

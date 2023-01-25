@@ -14,21 +14,25 @@ function Footer() {
                         <div className={ft.footer_content_header}>
                             Category
                         </div>
+                        <div className="pt-3 pb-3">
                         <p className={ft.content}>
                             <Link href='#'>Mens</Link><br />
                             <Link href='#'>Womens</Link>
                         </p>
+                        </div>
                     </div>
                     <div className="brand">
                         <div className={ft.footer_content_header}>
                             Brand
                         </div>
+                        <div className="pt-3 pb-3">
                         <p className={ft.content}>
                             <Link href='#'>Nike</Link><br />
                             <Link href='#'>Adidas</Link><br />
                             <Link href='#'>Puma</Link><br />
                             <Link href='#'>Gucci</Link>
                         </p>
+                        </div>
                     </div>
                     <div className="collection_exclusive">
                         <div className="collection">
@@ -41,7 +45,7 @@ function Footer() {
                                 <Link href='#'> Formal</Link>
                             </p>
                         </div>
-                        <div className="exclusive_story">
+                        <div className="pt-4 pb-4 exclusive_story">
                             <div className={ft.footer_content_header}>
                                 Exclusive Story
                             </div>
@@ -56,10 +60,11 @@ function Footer() {
                                 Follow us
                             </div>
                             <p className={ft.content}>
-                                <Link href='#'><i className="fa-brands fa-square-instagram footer_icon"></i></Link>
+                                <Link href='#'><i className="icons-instagram"></i></Link>
                                 <Link href='#'><i className="fa-brands fa-facebook footer_icon"></i></Link>
                                 <Link href='#'><i className="fa-brands fa-twitter footer_icon"></i></Link>
                                 <Link href='#'><i className="fa-brands fa-linkedin footer_icon"></i></Link>
+                                
                             </p>
                         </div>
                         <div className="mail_us">
