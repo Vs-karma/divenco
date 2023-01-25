@@ -1,6 +1,7 @@
 import React from "react";
 import pp from "../../styles/productpage.module.css";
 function ProductPageDetail() {
+  const shoeSizes = ["7Uk", "7Uk", "7Uk", "7Uk", "7Uk"];
   return (
     <div className={pp.mainDes}>
       <div className={pp.productDetail}>
@@ -12,13 +13,13 @@ function ProductPageDetail() {
             <div className={pp.sizeGuideBtn}>Size Guide</div>
           </div>
           <div className={pp.sizeGrid}>
-            <button className="sizeBtn">6 UK</button>
-            <button className="sizeBtn">7 UK</button>
-            <button className="sizeBtn">8 UK</button>
-            <button className="sizeBtn">9 UK</button>
-            <button className="sizeBtn">10 UK</button>
-            <button className="sizeBtn">11 UK</button>
-            <button className="sizeBtn">12 UK</button>
+            {shoeSizes.map((shoeSize, i) => {
+              return (
+                <div className="badge badge-outline" key={i}>
+                  {shoeSize}
+                </div>
+              );
+            })}
           </div>
         </div>
         <h1 className="desc">Description</h1>
