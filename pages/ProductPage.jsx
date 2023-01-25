@@ -10,7 +10,7 @@ function ProductPage() {
       <Link href="#">
         <a className="goBackLink">Go Back</a>
       </Link>
-      <div className={pp.divideTwo}>
+      <div className="flex flex-wrap justify-between">
         <ProductCarousel />
         <ProductPageDetail />
       </div>

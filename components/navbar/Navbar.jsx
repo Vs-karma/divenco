@@ -10,7 +10,7 @@ export default function Navbar() {
   const handleOnClose = () => setShowMyModal(false);
   return (
     <>
-    <div className="z-10 flex justify-between px-2 py-4 bg-white md:w-full">
+    <div className="z-10 flex justify-between p-2 bg-white shadow-md md:w-full">
       <div className="">
         <Image
           src="/logo.png"
@@ -35,10 +35,8 @@ export default function Navbar() {
         </div>
         <div className="cursor-pointer">
           <RxAvatar size={30} onClick={() => setShowMyModal(true)} />
-          {/* <Login onClose={handleOnClose} visible={showMyModal}/>  */}
         </div>
       </div> 
-      {/* <Login onClose={handleOnClose} visible={showMyModal}/>  */}
     </div>
     <Login onClose={handleOnClose} visible={showMyModal}/> 
     </>
