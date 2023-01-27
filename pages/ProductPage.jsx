@@ -8,9 +8,9 @@ function ProductPage() {
   return (
     <div className={pp.mainFrame}>
       <div className="p-5 text-2xl font-semibold text-gray-500">
-      <Link href="#">
-        <a className="goBackLink">Go Back</a>
-      </Link>
+        <Link href="/Sales">
+          <a className="goBackLink">Go Back</a>
+        </Link>
       </div>
       <div className="flex flex-wrap justify-between">
         <ProductCarousel />
