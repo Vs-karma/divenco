@@ -43,7 +43,7 @@ function ProductCarousel() {
           <AiOutlineRight size={30} />
         </ButtonNext>
         <div className={pp.imgShow}>
-          <Dot className={pp.imgPreview} slide={0}>
+          <Dot className={`${pp.imgPreview} ${pp.imgPreviewDel}`} slide={0}>
             <Image src="./adidasbrand.png" alt="shoe" />
           </Dot>
           <Dot className={pp.imgPreview} slide={1}>
