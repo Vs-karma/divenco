@@ -4,6 +4,7 @@ import Login from "./Login";
 
 export default function Signup({ visible, onClose}) {
 
+  
   const router  = useRouter(); 
   const [error , setError] = useState('')
   useEffect(() => {
@@ -33,8 +34,8 @@ export default function Signup({ visible, onClose}) {
       return ; 
     }
     let {confirmPassword , ...others } = input ; 
-      const res = await fetch("http://localhost:8000/auth/user/register" , {
-        method:'POST',
+    const res = await fetch("http://localhost:8000/auth/user/register" , {
+      method:'POST',
         headers :{
           'content-Type' : 'application/json'
         },
@@ -47,7 +48,7 @@ export default function Signup({ visible, onClose}) {
       if(data.success){
           let authToken = data.authToken; 
           localStorage.setItem('authToken',authToken);
-      }
+        }
       else{
         setError(data.msg);
         setTimeout(() => {
@@ -60,6 +61,7 @@ export default function Signup({ visible, onClose}) {
     setInput({...input , [e.target.name]:e.target.value}) 
   }
   
+  if(!visible) return null;
   return (
     <>
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-25 backdrop-blur-sm z-[100]">
