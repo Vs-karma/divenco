@@ -18,9 +18,8 @@ function ProductPageDetail() {
           <div className={pp.sizeGrid}>
             {shoeSizes.map((shoeSize, i) => {
               return (
-                <div className="p-5 text-lg font-bold bg-gray-200 badge badge-outline" key={i}>
-                  {shoeSize}
-                </div>
+                
+                <button className="h-10 px-5 text-black transition-colors duration-150 border border-black rounded-lg focus:shadow-outline hover:bg-slate-600 hover:text-white" key={i}>{shoeSize}</button>
               );
             })}
           </div>
