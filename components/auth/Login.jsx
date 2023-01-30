@@ -15,7 +15,7 @@ export default function Login({ visible, onClose}) {
   return (
     <>
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-25 backdrop-blur-sm z-[100]">
-            <div className="w-full p-8 m-auto rounded-md shadow-md bg-slate-200 lg:max-w-xl">
+            <div className="w-3/5 p-8 m-auto rounded-md shadow-md bg-slate-200 lg:max-w-xl">
                 <h1 className="text-3xl font-bold text-center text-black">
                    Login
                 </h1>

@@ -6,7 +6,7 @@ import WomensCollectionCard from './WomensCollectionCard'
 function Collections() {
     return (
         <>
-            <div className="container">
+            <div className="container scrollbar-hide">
                 <h1 className={hm.home_title}>Collections</h1>
                 <div className={hm.brand_list}>
                     <MensCollectionCard/>
