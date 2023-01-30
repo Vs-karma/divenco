@@ -1,8 +1,14 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from "react";
 import ft from '../styles/footer.module.css'
+import { AiOutlineInstagram, AiOutlineFacebook,AiOutlineTwitter,AiOutlineLinkedin } from "react-icons/ai";
 
 function Footer() {
+    const [insta, setInsta] = useState(true);
+    const [fb, setFb] = useState(true);
+    const [tweet, setTweet] = useState(true);
+    const [linkedin, setIinkedin] = useState(true);
+    
     return (
         <>
             <div className={ft.footer}>
@@ -59,13 +65,15 @@ function Footer() {
                             <div className={ft.footer_content_header}>
                                 Follow us
                             </div>
-                            <p className={ft.content}>
-                                <Link href='#'><i className="icons-instagram"></i></Link>
-                                <Link href='#'><i className="fa-brands fa-facebook footer_icon"></i></Link>
-                                <Link href='#'><i className="fa-brands fa-twitter footer_icon"></i></Link>
-                                <Link href='#'><i className="fa-brands fa-linkedin footer_icon"></i></Link>
+                            <div className='flex flex-row space-x-3'>
+                            
+                                {insta ? <AiOutlineInstagram size={30} /> : <AiOutlineInstagram size={30} />}
+                                {fb ? <AiOutlineFacebook size={30} /> : <AiOutlineFacebook size={30} />}
+                                {tweet ? <AiOutlineTwitter size={30} /> : <AiOutlineTwitter size={30} />}
+                                {linkedin ? <AiOutlineLinkedin size={30} /> : <AiOutlineLinkedin size={30} />}
                                 
-                            </p>
+                            
+                            </div>
                         </div>
                         <div className="mail_us">
                             <div className={ft.footer_content_header}>
