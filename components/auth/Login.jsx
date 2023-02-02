@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Signup from "./Signup";
 import Forget from "./Forget";
+import {FcGoogle} from "react-icons/ai";
 
 export default function Login({ visible, onClose}) {
     const [showMySign, setShowMySign] = useState(false);
@@ -15,7 +16,7 @@ export default function Login({ visible, onClose}) {
   return (
     <>
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-25 backdrop-blur-sm z-[100]">
-            <div className="w-3/5 p-8 m-auto rounded-md shadow-md bg-slate-200 lg:max-w-xl">
+            <div className="w-full p-8 m-5 rounded-md shadow-md bg-slate-200 lg:max-w-xl">
                 <h1 className="text-3xl font-bold text-center text-black">
                    Login
                 </h1>
@@ -61,7 +62,7 @@ export default function Login({ visible, onClose}) {
                             Login
                         </button>
                         <button className="m-2 btn btn-btnclr btn-xs md:btn">
-                            Login With G
+                            Login With 
                         </button>
                     </div>
                 </form>

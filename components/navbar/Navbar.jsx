@@ -20,15 +20,15 @@ export default function Navbar() {
           className="w-24 h-auto"
           />
       </div>
-      <div className="md:text-3xl text-xl md:w-[100%] md:justify-center md:flex md:gap-24 font-bold items-center hidden">
+      <div className="md:text-3xl text-xl md:w-[100%] md:justify-center md:flex md:gap-24 font-bold items-center hidden pl-2">
         <Link href="/">Home</Link>
         <Link href="/BrandPage">Brand</Link>
         <Link href="/Category">Category</Link>
-        <Link href="/Sales">Sale</Link>
+        <Link href="/Sales">Sales</Link>
       </div>
       <div className="flex items-center gap-3">
         <div className="cursor-pointer">
-          <AiOutlineShoppingCart size={30} />
+        <Link href="/CartPage"><AiOutlineShoppingCart size={30} /></Link> 
         </div>
         <div className="cursor-pointer">
           <AiOutlineHeart size={30} />

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React, { useState } from "react";
 import ft from '../styles/footer.module.css'
-import { AiOutlineInstagram, AiOutlineFacebook,AiOutlineTwitter,AiOutlineLinkedin } from "react-icons/ai";
+import { AiFillInstagram, AiFillFacebook,AiFillTwitterCircle,AiFillLinkedin } from "react-icons/ai";
 
 function Footer() {
     const [insta, setInsta] = useState(true);
@@ -67,15 +67,15 @@ function Footer() {
                             </div>
                             <div className='flex flex-row space-x-3'>
                             
-                                {insta ? <AiOutlineInstagram size={30} /> : <AiOutlineInstagram size={30} />}
-                                {fb ? <AiOutlineFacebook size={30} /> : <AiOutlineFacebook size={30} />}
-                                {tweet ? <AiOutlineTwitter size={30} /> : <AiOutlineTwitter size={30} />}
-                                {linkedin ? <AiOutlineLinkedin size={30} /> : <AiOutlineLinkedin size={30} />}
+                                {insta ? <AiFillInstagram size={30} /> : <AiFillInstagram size={30} />}
+                                {fb ? <AiFillFacebook size={30} /> : <AiFillFacebook size={30} />}
+                                {tweet ? <AiFillTwitterCircle size={30} /> : <AiFillTwitterCircle size={30} />}
+                                {linkedin ? <AiFillLinkedin size={30} /> : <AiFillLinkedin size={30} />}
                                 
                             
                             </div>
                         </div>
-                        <div className="mail_us">
+                        <div className="pt-3 mail_us">
                             <div className={ft.footer_content_header}>
                                 Mail us
                             </div>
