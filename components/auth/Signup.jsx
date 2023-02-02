@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Login from "./Login";
+import VerifyOTP from "./VerifyOTP";
 
 export default function Signup({ visible, onClose}) {
 
@@ -48,6 +49,7 @@ export default function Signup({ visible, onClose}) {
       if(data.success){
           let authToken = data.authToken; 
           localStorage.setItem('authToken',authToken);
+          router.push('/Authenticate/NewVerification'); 
         }
       else{
         setError(data.msg);
@@ -134,7 +136,7 @@ export default function Signup({ visible, onClose}) {
                             value={input.phone}
                         />
                     </div>
-                    
+                    <VerifyOTP email={input.email} password={input.password}/>
                     <div className="flex justify-center">
                         <button className="m-2 btn btn-btnclr btn-xs md:btn" onClick={handleSubmit}>
                             Register

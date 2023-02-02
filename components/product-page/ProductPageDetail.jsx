@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import pp from "../../styles/productpage.module.css";
 
 
@@ -7,6 +7,14 @@ import pp from "../../styles/productpage.module.css";
 function ProductPageDetail() {
 
   const shoeSizes = ["7Uk", "7Uk", "7Uk", "7Uk", "7Uk"];
+//   useEffect(()=>{
+//     let adminToken = localStorage.getItem('adminToken'); 
+//     if(!adminToken){
+//         navigate('/login'); 
+//     }
+//     // getAllProducts(); 
+
+// },[])
   
   
   return (
