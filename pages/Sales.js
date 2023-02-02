@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ProductCard from "../components/often-used/ProductCard";
+import { useRouter } from 'next/router';
 function Sales() {
     // sales page work
+    // const router = useRouter();
+    // useEffect(()=>{
+    //     let authToken = localStorage.getItem('authToken'); 
+    //     if(!authToken){
+    //         navigate('/login'); 
+    //     }
+    //     else{
+    //         router.push('/')
+    //     }
+    // },[])
     return (
         <div className="grid place-content-center">
             <div className="flex items-center justify-between m-3 xl:max-w-screen-xl">

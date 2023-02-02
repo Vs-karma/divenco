@@ -2,11 +2,18 @@ import React, { useState } from "react";
 import Forget from "./Forget";
 import Reset from "./Reset";
 
-export default function VerifyOTP({ visible, onClose}) {
+export default function VerifyOTP({ visible, onClose, email, password}) {
     const [showMyReset, setShowMyReset] = useState(false);
     const handleOnCloseReset = () => setShowMyReset(false);
     if(!visible) return null;
-
+    const [data, setData] = useState({
+        email:email,
+        password:password,
+        otp: 0,
+    })
+    const handleChange = (e) =>{
+        setInput({...input , [e.target.name]:e.target.value}) 
+    }
   
     
     return (
@@ -32,7 +39,7 @@ export default function VerifyOTP({ visible, onClose}) {
                               Phone
                           </label>
                           <input
-                              type="number"
+                              type="number" name="otp" value={input.otp} onChange={e => handleChange(e)}
                               className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
                           />
                       </div>

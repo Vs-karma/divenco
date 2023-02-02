@@ -1,15 +1,71 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Signup from "./Signup";
 import Forget from "./Forget";
+import { useRouter } from 'next/router';
+import { UserLogin } from '../../urls';
+import Link from "next/link";
+
 
 export default function Login({ visible, onClose}) {
-    const [showMySign, setShowMySign] = useState(false);
-    const handleOnClose = () => setShowMySign(false);
   
-    const [showMyForget, setShowMyForget] = useState(false);
-    const handleOnCloseForget = () => setShowMyForget(false);
-
   if(!visible) return null;
+  
+  
+  const router = useRouter();
+  const [error, setError] = useState('')
+  //forgot and signup
+  const [showMySign, setShowMySign] = useState(false);
+  const handleOnClose = () => setShowMySign(false);
+
+  const [showMyForget, setShowMyForget] = useState(false);
+  const handleOnCloseForget = () => setShowMyForget(false);
+  //
+  useEffect(() => {
+    document.title = 'Metal Station - Login'
+  }, [])
+
+
+  const [input, setInput] = useState({
+    email: '',
+    password: ''
+  });
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (input.email === '' || input.password === '') {
+      setError('Email and Password Required');
+      setTimeout(() => {
+        setError('')
+      }, 2000);
+      return;
+    }
+    const res = await fetch(UserLogin, {
+      method: 'POST',
+      headers: {
+        'content-Type': 'application/json'
+      },
+      body: JSON.stringify(input)
+    })
+    // let {resp} = await axios.post(UserLogin , input)
+    const data = await res.json();
+    console.log(data);
+    if (data.success) {
+      let authToken = data.authToken;
+      localStorage.setItem('authToken', authToken);
+      router.push('/');
+    }
+    else {
+      setError(data.msg);
+      setTimeout(() => {
+        setError('')
+      }, 2000);
+    }
+  }
+
+  const handleChange = (e) => {
+    setInput({ ...input, [e.target.name]: e.target.value })
+  }
   
   
   return (
@@ -32,7 +88,7 @@ export default function Login({ visible, onClose}) {
                             Email
                         </label>
                         <input
-                            type="email"
+                            type="email" name="email" required onChange={(e)=>handleChange(e)}
                             className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
@@ -44,7 +100,7 @@ export default function Login({ visible, onClose}) {
                             Password
                         </label>
                         <input
-                            type="password"
+                            type="password" name='password' required onChange={(e) => handleChange(e)}
                             className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
@@ -57,9 +113,11 @@ export default function Login({ visible, onClose}) {
                         Forget Password?
                     </a>
                     <div className="flex justify-center">
-                        <button className="m-2 btn btn-btnclr btn-xs md:btn">
+                        <Link href="/"><a>
+                          <button type='submit' onClick={(e) => handleSubmit(e)} className="m-2 btn btn-btnclr btn-xs md:btn">
                             Login
                         </button>
+                        </a></Link>
                         <button className="m-2 btn btn-btnclr btn-xs md:btn">
                             Login With G
                         </button>
