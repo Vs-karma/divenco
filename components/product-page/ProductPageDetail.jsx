@@ -1,7 +1,14 @@
 import React from "react";
 import pp from "../../styles/productpage.module.css";
+
+
+
+
 function ProductPageDetail() {
+
   const shoeSizes = ["7Uk", "7Uk", "7Uk", "7Uk", "7Uk"];
+  
+  
   return (
       
     <div className={pp.mainDes}>
@@ -33,7 +40,23 @@ function ProductPageDetail() {
         <div className="p-6 text-lg text-center bg-gray-100 productAvailability">
           <p>Product is Excluded from site Promotion and Discount</p>
         </div>
+        
+        <div className="flex flex-col justify-center pt-2 m-4 place-content-center">
+        
+        <button className="items-center px-4 py-3 m-3 text-2xl font-bold text-white bg-blue-500 rounded-full tex5t-white hover:bg-blue-700">
+          Buy Now
+        </button>
+        <button className="px-4 py-3 m-3 text-2xl font-bold bg-transparent border rounded-full border-slate-700 hover:bg-slate-200">
+          Add to Wishlist
+        </button>
+        <button className="px-4 py-3 m-3 text-2xl font-bold bg-transparent border rounded-full border-slate-700 hover:bg-slate-200">
+          Add to Cart
+        </button>
+        </div>
+        
+        
       </div>
+      
     </div>
   );
 }
