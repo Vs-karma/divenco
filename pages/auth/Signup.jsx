@@ -1,24 +1,29 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Login from "./Login";
-import VerifyOTP from "./VerifyOTP";
+import VerifyOTP from "./verify";
+import { EmailVerificationUrl,UserRegister } from "../../urls";
 
 export default function Signup({ visible, onClose}) {
 
   
   const router  = useRouter(); 
   const [error , setError] = useState('')
+  const [signup, setSignup] = useState(false)
   useEffect(() => {
     document.title = 'Divenco - Login'; 
   }, [])
   
   const [input , setInput] = useState({
+    name:'',
     email:'',
     password:'',
     confirmPassword : '',
-    phone : ''
+    phone : '',
+    otp:''
   });
   const handleSubmit = async () => {
+    setSignup(true)
     console.log('Clicked')
     if(input.password !== input.confirmPassword){
       setError('password and confirm password not matched');
@@ -35,12 +40,13 @@ export default function Signup({ visible, onClose}) {
       return ; 
     }
     let {confirmPassword , ...others } = input ; 
-    const res = await fetch("http://localhost:8000/auth/user/register" , {
+    console.log(input)
+    const res = await fetch(UserRegister , {
       method:'POST',
         headers :{
           'content-Type' : 'application/json'
         },
-        body : JSON.stringify(others)
+        body : JSON.stringify({name:input.name,email:input.email,password:input.confirmPassword,phone:input.phone})
       })
 
       // let {resp} = await axios.post(UserLogin , input)
@@ -49,7 +55,6 @@ export default function Signup({ visible, onClose}) {
       if(data.success){
           let authToken = data.authToken; 
           localStorage.setItem('authToken',authToken);
-          router.push('/Authenticate/NewVerification'); 
         }
       else{
         setError(data.msg);
@@ -58,6 +63,22 @@ export default function Signup({ visible, onClose}) {
         }, 2000); 
       }
   }
+
+  const handleSubmitVerify=async()=>{
+    // setOtp(parseInt(otp))
+    console.log(input.otp)
+    console.log(input.email);
+    console.log(input.password);
+    let result = await fetch(EmailVerificationUrl, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({email:input.email, password:input.password, otp:input.otp})
+    })
+    let data = await result.json();
+    console.log(data);
+}
 
   const handleChange = (e) =>{
     setInput({...input , [e.target.name]:e.target.value}) 
@@ -76,6 +97,21 @@ export default function Signup({ visible, onClose}) {
                 </div>
     
                 <form className="mt-3">
+                    <div className="mb-2">
+                        <label
+                            htmlFor="text"
+                            className="block text-lg font-semibold text-gray-800"
+                        >
+                            Name
+                        </label>
+                        <input
+                            type="text"
+                            name="name"
+                            className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                            onChange={e => handleChange(e)}
+                            value={input.name}
+                        />
+                    </div>
                     <div className="mb-2">
                         <label
                             htmlFor="email"
@@ -136,7 +172,32 @@ export default function Signup({ visible, onClose}) {
                             value={input.phone}
                         />
                     </div>
-                    <VerifyOTP email={input.email} password={input.password}/>
+                    {/* OTP */}
+                    
+                    { signup?
+                    <>
+                      <div className="mb-2">
+                        <label
+                            htmlFor="number"
+                            className="block text-lg font-semibold text-gray-800"
+                        >
+                            OTP
+                        </label>
+                        <input
+                            type="text"
+                            name="otp"
+                            className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                            onChange={e => handleChange(e)}
+                            value={input.otp}
+                        />
+                      </div>
+                        <div className="flex justify-center">
+                          <button className="m-2 btn btn-btnclr btn-xs md:btn" onClick={handleSubmitVerify}>
+                              Verify
+                          </button>
+                        </div>
+                      </>
+                    :
                     <div className="flex justify-center">
                         <button className="m-2 btn btn-btnclr btn-xs md:btn" onClick={handleSubmit}>
                             Register
@@ -145,6 +206,7 @@ export default function Signup({ visible, onClose}) {
                             Signup with Google
                         </button>
                     </div>
+                }
                 </form>
 
                 <p className="mt-8 text-sm text-center text-gray-700 font-lmight">
@@ -161,3 +223,4 @@ export default function Signup({ visible, onClose}) {
         </>
   );
 }
+

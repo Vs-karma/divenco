@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Forget from "./Forget";
 import Reset from "./Reset";
 
 export default function VerifyOTP({ visible, onClose, email, password}) {
     const [showMyReset, setShowMyReset] = useState(false);
     const handleOnCloseReset = () => setShowMyReset(false);
+    useEffect(() => {
+      console.log(email);
+      console.log(password);
+    }, [])
+    
     if(!visible) return null;
     const [data, setData] = useState({
         email:email,
@@ -57,7 +62,7 @@ export default function VerifyOTP({ visible, onClose, email, password}) {
               
           </div>
           <Reset onClose={handleOnCloseReset} visible={showMyReset}/>
-          </>
+        </>
     );
   }
   

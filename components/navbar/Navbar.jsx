@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import { RxAvatar } from "react-icons/rx";
-import Login from "../auth/Login";
+import Login from "../../pages/auth/Login";
 
 export default function Navbar() {
   const [showMyModal, setShowMyModal] = useState(false);
