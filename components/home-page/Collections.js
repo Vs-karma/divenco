@@ -6,11 +6,13 @@ import WomensCollectionCard from './WomensCollectionCard'
 function Collections() {
     return (
         <>
-            <div className="container scrollbar-hide">
+            <div className="container ">
                 <h1 className={hm.home_title}>Collections</h1>
+                <div className='scrollbar-hide'>
                 <div className={hm.brand_list}>
                     <MensCollectionCard/>
                     <WomensCollectionCard />
+                </div>
                 </div>
             </div>
         </>

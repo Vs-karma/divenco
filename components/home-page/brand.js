@@ -12,7 +12,7 @@ function brand() {
               <div className='m-5'>
                 <h1 className={hm.home_title}>Brands</h1>
               </div>
-                <div className='flex-row grid-cols-3 gap-4 m-5 overflow-y-auto h-96 md:grid scrollbar-hide md:h-full'> 
+                <div className='flex-row grid-cols-3 gap-4 m-5 overflow-y-auto h-96 md:grid scrollbar-hide md:h-full place-content-center'> 
                 
                     <ProductCard1 />
                     <ProductCard1 />

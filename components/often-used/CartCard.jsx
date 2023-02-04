@@ -6,7 +6,6 @@ const   CartCard = () => {
   const [heart, setHeart] = useState(true);
   return (
     <div className="grid w-full grid-cols-2 m-3 transition duration-200 bg-gray-100 hover:shadow-xl card">
-      {/* <div className="absolute badge top-4 left-4">Cart System</div> */}
       <div>
       <figure>
         <img src="/adidasbrand.png" alt="shoe" />
