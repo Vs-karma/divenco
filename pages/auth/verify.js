@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { EmailVerificationUrl } from '../../urls'
 
-function verify({email,password}) {
+function verify() {
     const [input, setInput] = useState({
         email:"",
         otp:"",
         password:"",
     })
-    useEffect(() => {
-      console.log(email)
-      console.log(password)
-    }, [])
+    // useEffect(() => {
+    //   console.log(email)
+    //   console.log(password)
+    // }, [])
     
     // const [otp, setOtp] = useState('')
     const handleChange = (e) => {
